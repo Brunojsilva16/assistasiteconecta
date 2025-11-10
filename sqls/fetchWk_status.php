@@ -1,0 +1,36 @@
+<?php
+$output = array('error' => false);
+require_once __DIR__  . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'classes' . DIRECTORY_SEPARATOR . 'dataSource.php';
+
+use Dsource\DataSource;
+
+$database = new DataSource();
+$output = array('error' => false);
+
+$sql0 = "SELECT count(*) as `total_count`, `status_insc` FROM `workshop`";
+$resultConf = $database->selectArray($sql0);
+if (!empty($resultConf)) {
+	$output['total_count'] = $resultConf[0]['total_count'];
+}
+
+$sql01 = "SELECT count(*) as `confirmado_count`, `status_insc` FROM `workshop` WHERE `status_insc` = 'confirmado'";
+$resultConf1 = $database->selectArray($sql01);
+if (!empty($resultConf1)) {
+	$output['confirmado_count'] = $resultConf1[0]['confirmado_count'];
+}
+
+$sql02 = "SELECT count(*) as `cancelado_count`, `status_insc` FROM `workshop` WHERE `status_insc` = 'cancelado'";
+$resultConf2 = $database->selectArray($sql02);
+if (!empty($resultConf2)) {
+	$output['cancelado_count'] = $resultConf2[0]['cancelado_count'];
+}
+
+$sql03 = "SELECT count(*) as `null_count`, `status_insc` FROM `workshop` WHERE `status_insc` is null";
+$resultConf3 = $database->selectArray($sql03);
+if (!empty($resultConf3)) {
+	$output['null_count'] = $resultConf3[0]['null_count'];
+}
+// close connection
+$database->closeConection();
+echo json_encode($output);
+// echo json_encode($chartData);
