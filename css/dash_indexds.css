@@ -1,0 +1,96 @@
+.menu-button {
+  background-color: rgb(139, 108, 108);
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  /* Add any other styles specific to your button */
+}
+
+/* Applying similar styles to your icon */
+#menu-icon {
+  /* You might want to remove default browser styles if any */
+  -webkit-appearance: none;
+  /* For Webkit browsers */
+  -moz-appearance: none;
+  /* For Mozilla browsers */
+  appearance: none;
+  /* Standard */
+
+  background-color: rgba(0, 0, 0, 0.1);
+  /* Or transparent if you prefer */
+  border: 1px solid #ccc;
+  /* Or 'none' if you don't want a border */
+  /* padding: 10px 15px; */
+  cursor: pointer;
+  /* Very important for indicating it's clickable */
+  border-radius: 5px;
+  font-size: 16px;
+  /* Adjust as needed for your icon size */
+  display: inline-block;
+  /* Essential for padding and sizing to work correctly */
+  text-align: center;
+  /* If you want the icon centered within its clickable area */
+  line-height: 1;
+  /* Helps with vertical alignment of the icon */
+
+  /* Define uma transição suave para as propriedades 'padding' e 'transform' */
+  transition: padding 0.3s ease-in-out, transform 0.3s ease-in-out;
+  /* Smooth transition on hover */
+}
+
+#menu-icon:hover {
+  background-color: rgb(143, 59, 59);
+}
+
+#menu-icon:active {
+  background-color: rgb(204, 151, 90);
+  border-color: #999;
+  /* transform: rotate(90deg); */
+  /* Exemplo de rotação para o ícone 'X' */
+}
+
+.load-info {
+  margin-top: 90px;
+
+  /* border: 2px solid #27ae60;
+padding: 20px;
+background-color: #e6ffee;
+color: #1b7a42;
+text-align: center; */
+}
+
+.active-menu {
+  /* Para os filtros */
+  background-color: #374151 !important;
+  /* bg-gray-700 */
+  color: #ffffff !important;
+}
+
+.active-navbar {
+  /* Para os filtros */
+  background-color: #374151 !important;
+  /* bg-gray-700 */
+  color: #ffffff !important;
+}
+
+.active-li {
+  background-color: #313443;
+  border-left: solid 5px #af2846;
+  color: #ddd !important;
+  width: 100%;
+}
+.active-re {
+  background-color: #313443;
+  border-left: solid 46+-px #af2846;
+  color: #ddd !important;
+  width: 100%;
+}
+
+#subpageTitle {
+  margin: 0;
+  padding: 0;
+  color: #7294a1;
+  font-size: 1.3rem;
+}

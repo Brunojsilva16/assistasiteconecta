@@ -1,0 +1,176 @@
+/* * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Arial";
+} */
+
+body {
+    /* width: 100%; */
+    /* min-height: 100vh; */
+    /* place-items: center; */
+    background-color: #fff;
+}
+
+div.box-status {
+    display: grid;
+    min-width: 500px;
+    background-color: #f9f8ee;
+    border-radius: 15px;
+    text-align: left;
+    padding: 15px 2%;
+}
+
+div.box-status h1 {
+    font-size: 22pt;
+    color: rgb(80, 80, 80);
+    margin: 15px 0;
+}
+
+div.box-status button {
+    font-size: 16pt;
+    color: white;
+    background-color: dodgerblue;
+    border-radius: 5px;
+    padding: 10px 15px;
+    border: 0;
+    cursor: pointer;
+}
+
+@keyframes roll {
+    0% {
+        transform: rotateX(90deg);
+        filter: brightness(100%);
+        top: 0;
+    }
+
+    50% {
+        transform: rotateX(360deg);
+        filter: brightness(60%);
+
+    }
+
+    100% {
+        transform: rotateX(91deg);
+        filter: brightness(100%);
+        top: 500px;
+    }
+}
+
+.confete.roll {
+    color: #fff;
+    top: 0;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: red;
+    animation-name: roll;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+#statusRpedido {
+    font-size: 20px;
+    background: #771338;
+    color: #fff;
+    padding: 30px;
+    width: 100%;
+}
+
+#statusApedido {
+    font-size: 20px;
+    background: #137752;
+    color: #fff;
+    padding: 30px;
+    width: 100%;
+}
+
+.w-70-status {
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-left: auto;
+    margin-right: auto"
+
+}
+
+.confirma-bloco {
+    border-radius: .5rem;
+    background: #fff;
+    padding: 2rem;
+    border: 1px solid #000;
+}
+
+
+p.msgAp {
+    margin-top: 16px;
+    font-size: 50px;
+    color: #137752;
+    font-weight: 600;
+}
+
+p.msgRp {
+    margin-top: 16px;
+    font-size: 50px;
+    color: #771338;
+    font-weight: 600;
+}
+
+.msgAconfirm {
+    font-size: 24px;
+    color: #137752;
+}
+
+.msgRconfirm {
+    font-size: 24px;
+    color: #771338;
+}
+
+.msgApedido {
+    font-size: 30px;
+    color: #137752;
+    font-weight: 600
+}
+
+.msgRpedido {
+    font-size: 30px;
+    color: #771338;
+    font-weight: 600
+}
+
+#blocoA-confirma {
+    border-radius: .5rem;
+    background: #e8fdf5;
+    padding: 2rem;
+    border: 1px solid #19a974;
+    margin-top: 20px;
+}
+
+#blocoR-confirma {
+    border-radius: .5rem;
+    background: #fdfde8;
+    padding: 2rem;
+    border: 1px solid #771338;
+    margin-top: 20px;
+}
+
+.aprovado {
+    text-align: center;
+    width: auto;
+    height: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aprovado div {
+    width: 100px;
+    height: 100px;
+}
+
+/* @media screen and (min-width: 30em) {
+  .w-70-status {
+    width: 85%;
+  }
+
+} */

@@ -1,0 +1,138 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    /* background: linear-gradient(0deg, #f4f3f3, 70%, blue); */
+
+
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 0) 30%),
+        linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 0) 30%),
+        url(../assets/img/papo5.png);
+
+    /* url(../assets/img/papo5.png); */
+    /* background-image: url(../assets/img/papo5.png); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    height: 100vh;
+
+}
+
+
+
+.quiz-container {
+    width: 80%;
+    max-width: 600px;
+    z-index: 1020;
+}
+
+/* .question-container {
+    border: 1px solid #ccc;
+    padding: 20px;
+} */
+
+.options {
+    list-style: none;
+    padding: 0;
+}
+
+.option {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    text-align: start;
+    text-decoration: none;
+}
+
+button.btn {
+    text-align: start;
+    font-weight: 600;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 1rem;
+    /* padding-left: 1rem !important; */
+}
+
+h2 {
+    /* padding: 0 2rem; */
+    margin: 0;
+    padding-left: 2rem;
+    font-size: 1.5rem!important;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#topleft {
+    background-image: url(../assets/img/banner-top.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40vh;
+    width: 100%;
+    z-index: 1;
+}
+
+
+#logo1 {
+    background-image: url(../assets/img/papo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    height: 10%;
+    width: 40%;
+}
+
+#startquiz {
+    font-weight: 600;
+    text-align: justify;
+    hyphens: auto;
+    width: 32rem;
+    font-size: 2rem
+}
+
+#finalquiz {
+    font-weight: 600;
+    text-align: justify;
+    hyphens: auto;
+    width: 32rem;
+    font-size: 1.2rem
+}
+
+
+@media only screen and (max-width: 720px) {
+
+    #topleft {
+        height: 15vh;
+    }
+
+    #topright,
+    #rodapePapo {
+        background-image: none;
+    }
+    
+    #startquiz, #finalquiz {
+        width: 22rem;
+        font-size: 1.6rem
+    }
+    
+    #startquiz, #finalquiz { 
+        width: 22rem;
+        font-size: 1.25rem
+    }
+    
+}

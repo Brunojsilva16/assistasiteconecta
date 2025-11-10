@@ -1,0 +1,26 @@
+#credenciamento {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: bisque;
+    /* justify-content: space-around; */
+    /* align-items: end; */
+    height: 100vh;
+}
+
+#blocoA-confirma {
+    margin-top: 30px;
+}
+
+.alert-success {
+    --bs-alert-bg: #19875452!important;
+}
+
+.btn-outline-info {
+    --bs-btn-color: #14aac9!important;
+    --bs-btn-border-color: #14aac9!important;
+}
+
+div:where(.swal2-container) .swal2-html-container {
+    color:#942828!important;
+    font-size: 1.325em!important;
+}

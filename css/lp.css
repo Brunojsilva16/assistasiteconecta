@@ -1,0 +1,167 @@
+#entrada-one {
+    background: url("../assets/img/palestrante_lp.png");
+    background-size: contain;
+    position: relative;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    width: 640px;
+    height: 712px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    /* transform: scaleX(1);
+    /* order: 1; */
+}
+
+header.event-subscription {
+    color: var(--text-color);
+}
+
+.divflexHeader {
+    display: flex;
+    height: 100vh;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: flex-end;
+    align-items: flex-end;
+}
+
+
+input#btn-inscr.btn {
+    background-color: #198754de;
+    color: var(--text-color);
+    text-transform: uppercase;
+    /* width: 50%; */
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+input#btn-inscr.btn:hover {
+    opacity: 1;
+}
+
+#subscription-form p {
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.8em;
+}
+
+.form-group label {
+    color: var(--text-color);
+    /* margin-bottom: 0.3em; */
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.form-group input,
+.form-group select {
+    padding: 6px 10px;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    margin: 5px 0;
+}
+
+#subscription-form {
+    background-color: #5d5d5d87;
+    padding: 20px;
+    width: 540px;
+    border-radius: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    /* left: 720px;
+    bottom: 0px; */
+}
+
+#principal {
+    order: 1;
+    align-self: center;
+    justify-self: center;
+    /* width: 31%; */
+}
+
+div.ctb {
+    width: auto;
+    margin: 0px;
+    font-weight: 600;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+div.ctb button {
+    text-transform: uppercase;
+    font-family: Poppins;
+    border-radius: 50px;
+}
+
+/* Mobile */
+@media (max-width: 620px) {
+
+    
+    div#quem_wilson,
+    div#quem_paulo {
+        width: 500px !important;
+        height: 500px !important;
+        margin: 20px 20px 0px 20px !important;
+        border-radius: 40px !important;
+    }
+
+    #subscription-form {
+        padding: 15px;
+        width: 100%;
+    }
+
+    #subscription-p {
+        font-size: 16 !important;
+    }
+
+
+    .divflexHeader {
+        flex-wrap: wrap !important;
+    }
+
+    #principal {
+        margin-top: 50px !important;
+        align-self: center !important;
+        order: 0 !important;
+        /* width: 100%; */
+    }
+
+    #entrada-one {
+        width: 270px !important;
+        height: 270px !important;
+    }
+
+    #entrada {
+        width: 180px !important;
+        left: 12px !important;
+        top: 7px !important;
+    }
+
+
+    #facilite01 {
+        order: 2 !important;
+    }
+
+    #entrada-conecta {
+
+        width: 180px !important;
+        left: 12px !important;
+        top: 7px !important;
+    } 
+
+}

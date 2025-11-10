@@ -1,0 +1,198 @@
+.section_two {
+    height: auto;
+    /* width: 100vw; */
+    background: linear-gradient(#10151d, #af2846, #10151d);
+}
+
+p.aprender-title {
+    font-family: Poppins;
+    font-size: 32px;
+    text-align: center;
+    font-weight: 600;
+    color: #fff;
+    padding-top: 20px;
+}
+
+p.aprender-title span.onespan {
+    font-family: Poppins;
+    color: var(--p-primary);
+
+}
+
+p.aprender-title span.twospan {
+    font-family: Poppins;
+    color: var(--p-secondary);
+}
+
+.cards_all {
+    /* height: 50vh; */
+    flex-wrap: wrap;
+    width: auto;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+    /* max-width: 75%; */
+}
+
+.card_w {
+    width: 230px;
+    height: 215px;
+    margin: 25px;
+    background: linear-gradient(to bottom left, #e29c50e0, #e8a0a0);
+    border-radius: 22px;
+    color: #b44242;
+    box-shadow: rgb(157 74 74 / 25%) 0px 12px 20px, rgb(124 71 71 / 25%) 0px 6px 6px;
+    cursor: point;
+    transition: 1s;
+}
+
+.card_w:hover {
+    transform: scale(1.25);
+    /* transition-duration: 1s;
+    transition-timing-function: ; */
+}
+
+.card_header {
+    height: 100px;
+    width: 100%;
+    background: red;
+    border-radius: 0% 0% 100% 0% / 0% 0% 75% 0%;
+    display: grid;
+    place-items: center;
+}
+
+.card_header div {
+    background-image: url(../assets/img/conecta.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: #fff;
+    /* font-size: 60px; */
+    height: 70%;
+    width: 70%;
+}
+
+.card_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+    margin: 12px auto;
+}
+
+.card_title {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.card_text {
+    text-align: center;
+    font-size: 16px;
+    color: var(--p-primary);
+    font-weight: 600;
+    width: 100%;
+    margin-bottom: 0;
+    margin-top: -2px;
+}
+
+.card_btn {
+    border: none;
+    border-radius: 100px;
+    padding: 5px 35px;
+    color: aqua;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.card_header.one {
+    background: var(--p-primary);
+}
+
+.card_btn.one {
+    background: linear-gradient(to bottom left, #203d9c, #44558c);
+}
+
+
+
+
+#parceiro {
+    /* background-color: var(--p-primary); */
+    background: linear-gradient(#10151d, #af2846, #10151d);
+}
+
+.card_parceiro {
+    background-color: #fff;
+    box-shadow: rgb(157 74 74 / 25%) 0px 12px 20px, rgb(124 71 71 / 25%) 0px 6px 6px;
+    width: 220px;
+    height: 150px;
+    margin: 25px;
+    border-radius: 22px;
+    transition: 1s;
+}
+
+#parceiro-1 {
+    display: flex;
+    justify-content: center;
+    /* background-image: url(../assets/img/logo_atcpe.png); */
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+
+#parceiro-2 {
+    display: flex;
+    justify-content: center;
+    /* background-image: url(../assets/img/psicomanager.png); */
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+
+#parceiro-1 img,
+#parceiro-2 img {
+    width: 80%;
+    height: 150px;
+    object-fit: contain;
+}
+
+.card_parceiro:hover {
+    transform: scale(1.25);
+    /* transition-duration: 1s;
+    transition-timing-function: ; */
+}
+
+h1.title-parceiro {
+    font-family: Poppins;
+    margin-top: 20px;
+    font-weight: 700;
+    color: var(--p-secondary);
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 38px;
+}
+
+
+@media (max-width: 620px) {
+
+    .cards_all {
+        gap: 0 !important;
+    }
+
+    .divflexCard {
+        padding-top: 140px;
+        padding-bottom: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: end;
+        height: auto;
+    }
+
+    header.event-subscription {
+        height: auto !important;
+    }
+
+}

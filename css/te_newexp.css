@@ -1,0 +1,760 @@
+.divflexCart {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  /* padding-top: 15px; */
+  padding-bottom: 20px;
+  gap: 1.5rem;
+}
+
+.divflexTop {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  height: auto;
+}
+
+#teleft {
+  background: url(../assets/te/te-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 175px;
+  height: 175px;
+  left: 15px;
+  top: 15px;
+}
+
+#teright {
+  background: url(../assets/te/te-conecta.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  right: 15px;
+  top: 15px;
+}
+
+#inputthree,
+#inputfour,
+#inputtwo,
+#inputone,
+#inputzero {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* min-height: 100vh; */
+  margin-bottom: 16px;
+}
+
+.event-cart {
+  background: url(../assets/te/encerradas.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 80vh;
+  color: var(--text-color);
+  padding-bottom: 10px;
+}
+
+#lotes {
+  height: auto;
+  background-color: #fbf7f8;
+}
+
+input.inscreva-form.btn:hover {
+  opacity: 0.7;
+}
+
+#botCupom:hover {
+  border-color: #666;
+  background-color: #198754;
+}
+
+span.resumoSpan {
+  font-weight: 400;
+}
+
+#cupomParc {
+  width: auto !important;
+}
+
+input.mod_one,
+input.mod_two,
+input.mod_three,
+input.mod_four {
+  visibility: hidden;
+  display: block;
+  border: 4px solid #666;
+}
+
+input[type="radio"]:checked+label {
+  border-color: #ccf;
+  background-color: green;
+  /* opacity: 0.8;   */
+}
+
+input[type="radio"]+label {
+  color: #fff;
+  background-color: var(--p-primary);
+  padding: 8px;
+  border-radius: 12px;
+  border: solid 2px transparent;
+  font-family: Poppins;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  letter-spacing: 0.7px;
+}
+
+input.btn-modalidade.btn {
+  background-color: #198754de;
+  color: var(--text-color);
+  text-transform: uppercase;
+  width: 50%;
+  padding: 6px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+input.btn-modalidade.btn:hover {
+  opacity: 1;
+}
+
+/* Cor padrão para os spans */
+.label-estilizada .magic,
+.label-estilizada .xvista {
+  color: #888;
+  /* Uma cor padrão, por exemplo */
+  transition: color 0.3s ease;
+}
+
+/* A MÁGICA ACONTECE AQUI:
+  Quando o input estiver :checked, encontre a label (+) ao lado dele
+  e então mude a cor dos spans DENTRO dela.
+*/
+input.mod_two:checked+label .magic {
+  color: #343a40;
+  /* Cor desejada para o "de/por" */
+}
+
+input.mod_two:checked+label .xvista {
+  color: green;
+  font-weight: 600;
+  font-size: 17px;
+  /* Cor verde para o preço final, por exemplo */
+}
+
+/* Opcional: Estilo para a label inteira quando selecionada */
+input.mod_two:checked+label {
+  border-color: #008000;
+  box-shadow: 0 0 5px rgba(0, 128, 0, 0.5);
+  padding: 5px 8px;
+}
+
+
+.custom-radio label .fa-check {
+  display: none;
+  color: #10b981;
+  /* Verde esmeralda */
+}
+
+.custom-radio input[type="radio"]:checked+label {
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+  background-color: #f0fdf4;
+  color: #000;
+  padding: 8px;
+}
+
+.custom-radio input[type="radio"]:checked+label .fa-check {
+  display: inline-block;
+}
+
+.contorno-one {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 15px 12px;
+  width: 385px;
+  border-radius: 30px;
+  margin: 5px;
+  box-shadow: 5px 10px 20px 2px black;
+  -webkit-box-shadow: 5px 10px 20px 2px black;
+}
+
+.contorno {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 14px;
+  /* Permite que o item cresça para ocupar espaço extra */
+  flex-basis: 25rem;
+  /* Define o tamanho "ideal" do item antes de crescer/encolher */
+  min-width: 25rem;
+  /* Define a largura MÍNIMA, conforme seu requisito */
+  max-width: 25rem;
+  min-height: 33rem;
+  border-radius: 30px;
+  margin: 5px;
+  box-shadow: 5px 10px 20px 2px black;
+  -webkit-box-shadow: 5px 10px 20px 2px black;
+}
+
+.frmulario {
+  font-family: Poppins;
+  font-weight: 600;
+  color: var(--p-primary);
+}
+
+/* .form-control {
+  margin-bottom: 10px !important;
+} */
+
+#twocontorno.contorno,
+#onecontorno.contorno,
+#zerocontorno.contorno {
+  background-color: #fff;
+  opacity: 0.3;
+  /* order: 2; */
+}
+
+#pagamento {
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 40px;
+  height: auto !important;
+}
+
+.modvalue {
+  text-align: right;
+  font-size: 20px;
+}
+
+.container_for {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  align-content: center;
+  /* border: solid 3px red; */
+  height: auto;
+  width: 50%;
+  /* flex-grow: 1; */
+}
+
+.container_res {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: space-around;
+  /* border: solid 3px red; */
+  height: auto;
+  width: 100%;
+}
+
+#resumo_compra {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  /* border: solid 3px rgb(36, 56, 167); */
+  height: auto;
+  width: 100%;
+  margin: 15px 5px;
+  padding: 25px;
+}
+
+#resumo_pagamento {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  align-items: start;
+  /* border: solid 3px rgb(36, 56, 167); */
+  height: auto;
+  width: 100%;
+  margin: 15px 5px;
+  padding: 25px;
+}
+
+#frmcad {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#formCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+/* #frmInsc_lote,
+#formGrupo {
+  padding: 0 20px;
+} */
+
+#frmInsc_lote .row {
+  padding-top: 6px;
+}
+
+#docUpload {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 8px 0;
+}
+
+.selecao {
+  background-color: #f1ebeb;
+  padding: 8px;
+  font-size: 15px !important;
+}
+
+.txbotaopagamento {
+  font-size: 19px;
+  color: var(--p-primary);
+  font-weight: 700;
+}
+
+/* 
+div.radioone.contorno,
+div.radiotwo.contorno {
+    opacity: 0.5;
+} */
+
+.xvista {
+  font-size: 16px;
+  color: #ffd95d;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.xdez {
+  font-size: 16px;
+  color: var(--p-primary);
+  font-weight: 600;
+}
+
+.loteper {
+  font-size: 14px;
+  letter-spacing: 6px;
+  /* text-transform: lowercase;  */
+  margin: 4px;
+}
+
+.loteou {
+  font-size: 13px;
+  display: flex;
+  letter-spacing: 0.8px;
+  margin: 2px 10px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.encerrado {
+  text-decoration: line-through;
+}
+
+.pessoa {
+  padding-top: 0;
+}
+
+/* #inputzero, #inputtow {
+    opacity: 0.4;
+} */
+
+.prevent-select {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+div.vendah {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Poppins !important;
+  text-transform: uppercase;
+}
+
+div.vendah h2 {
+  font-size: 24px;
+}
+
+div.vendah span {
+  font-size: 14px;
+}
+
+.btn-success {
+  text-transform: uppercase !important;
+  font-weight: 600 !important;
+  border-radius: 25px !important;
+}
+
+#dadoslote_one,
+#dadoslote_grupo {
+  width: 180px !important;
+}
+
+/* .tebtnBack {} */
+
+
+.tebtnBack {
+  width: 10% !important;
+  left: 0px;
+  position: absolute !important;
+  background-color: #e4dede;
+  /* Cor de fundo suave */
+  border-radius: 9999px;
+  /* Botão completamente redondo */
+  padding: 0.75rem;
+  /* Preenchimento interno */
+  display: flex;
+  /* Para centralizar o ícone dentro do botão */
+  align-items: center;
+  /* Alinha o ícone verticalmente */
+  justify-content: center;
+  /* Alinha o ícone horizontalmente */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Sombra sutil */
+  transition: transform 0.2s;
+  /* Transição suave ao interagir */
+  position: absolute !important;
+  left: 0;
+}
+
+
+.tebtnBack:hover {
+  transform: scale(1.05);
+  /* Pequeno aumento no tamanho ao passar o mouse */
+}
+
+
+.tebtn {
+  width: 55%;
+  height: 35px;
+  margin: 15px 0;
+  border-radius: 50px;
+  border: none !important;
+  outline: none;
+  background: linear-gradient(45deg, var(--p-secondary), 60%, var(--p-primary));
+  font-size: 16px;
+  font-weight: 500;
+  color: #eee;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+  overflow: hidden;
+}
+
+
+.tebtn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0%;
+  height: 100%;
+  width: 00%;
+  background: linear-gradient(262deg, var(--p-secondary), 60%, var(--p-primary));
+  transition: .5s ease;
+  z-index: -1;
+}
+
+.tebtn:hover {
+  color: #eee;
+}
+
+.tebtn:hover:before {
+  width: 100%;
+}
+
+.file-upload {
+  position: relative;
+  display: inline-block;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.file-upload input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.file-upload-label {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  /* Cor de fundo do botão */
+  border: 1px solid #ccc;
+  /* Cor da borda */
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  /* Transição suave para o hover */
+  white-space: nowrap;
+  /* Evita que o texto quebre */
+  overflow: hidden;
+  /* Recorta o texto que ultrapassa o limite */
+  text-overflow: ellipsis;
+  /* Adiciona "..." ao texto cortado */
+  max-width: 200px;
+  /* Largura máxima do label */
+}
+
+.file-upload-label:hover {
+  background-color: #f0f0f0;
+  /* Cor de fundo do botão no hover */
+}
+
+.file-upload-label i {
+  margin-right: 8px;
+  /* Espaço entre o ícone e o texto */
+  font-size: 16px;
+}
+
+.file-name-display {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.9em;
+  color: #6c757d;
+  white-space: nowrap;
+  /* Evita que o texto quebre */
+  overflow: hidden;
+  /* Recorta o texto que ultrapassa o limite */
+  text-overflow: ellipsis;
+  /* Adiciona "..." ao texto cortado */
+  max-width: 300px;
+}
+
+span.magic {
+  font-size: 11px;
+  font-weight: 500;
+  /* background-color: #4f4b3ca3; */
+  border-radius: 10px;
+  color: #d9c1c1;
+  padding: 4.5px 6px;
+  letter-spacing: 0.6px;
+}
+
+footer {
+  background-color: #21252921 !important;
+}
+
+.footer-center {
+  /* background-color: #21252921 ;  */
+  /* Cor de fundo escura para o footer */
+  color: #ecf0f1;
+  /* Cor do texto clara */
+  padding: 20px;
+  /* Preenchimento interno */
+  display: flex;
+  /* Habilita o Flexbox */
+  justify-content: space-between;
+  /* Distribui o espaço entre os itens (esquerda e direita) */
+  align-items: center;
+  /* Alinha os itens verticalmente ao centro */
+  flex-wrap: wrap;
+  /* Permite que os itens quebrem para a próxima linha em telas menores */
+  gap: 30px;
+  /* Espaçamento entre os blocos (esquerda e direita) quando lado a lado */
+  border-top: 1px solid #34495e;
+  /* Uma linha sutil no topo */
+}
+
+/* Estilos para o bloco da esquerda (duas imagens) */
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  /* Espaçamento entre as duas imagens */
+  flex-wrap: wrap;
+  /* Permite que as imagens quebrem em telas muito pequenas */
+}
+
+/* Estilos para o bloco da direita (texto e imagem do parceiro) */
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  /* Espaçamento entre o texto "PARCEIRO" e a imagem */
+  flex-wrap: wrap;
+  /* Permite que o texto e a imagem quebrem */
+  justify-content: center;
+  /* Centraliza itens em telas pequenas quando wrapeados */
+}
+
+/* Estilos para as imagens dentro do footer */
+.footer-left img,
+.footer-right img {
+  max-width: 160px;
+  /* Largura máxima para as imagens */
+  height: auto;
+  /* Mantém a proporção original da imagem */
+  display: block;
+  /* Remove qualquer espaço extra abaixo da imagem */
+  transition: transform 0.3s ease;
+  /* Efeito de transição ao passar o mouse */
+}
+
+footer #logo-foot {
+  background-image: url(../assets/te/conecta.png) !important;
+}
+
+footer a {
+  color: var(--p-primary) !important;
+}
+
+
+@media (max-width: 992px) {
+  footer {
+    padding: 20px 15px;
+    gap: 25px;
+  }
+
+  .footer-left,
+  .footer-right {
+    gap: 15px;
+  }
+
+  .footer-left img,
+  .footer-right img {
+    max-width: 100px;
+    /* Reduz o tamanho das imagens */
+  }
+
+  .partner-text {
+    font-size: 1em;
+  }
+}
+
+/* Para telas pequenas (ex: tablets em modo retrato e celulares) */
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    /* Empilha os blocos (esquerda e direita) verticalmente */
+    text-align: center;
+    /* Centraliza o texto dentro do footer */
+    padding: 20px 10px;
+    gap: 20px;
+    /* Espaço entre os blocos empilhados */
+  }
+
+  .footer-left,
+  .footer-right {
+    flex-direction: row;
+    /* Empilha os itens dentro de cada bloco */
+    gap: 10px;
+    /* Espaço entre os itens empilhados */
+    /* width: 100%;  */
+    /* Ocupa a largura total */
+    justify-content: center;
+    /* Centraliza itens quando empilhados */
+  }
+
+  .footer-left img,
+  .footer-right img {
+    max-width: 90px;
+    /* Reduz ainda mais o tamanho das imagens */
+  }
+
+  .partner-text {
+    margin-bottom: 5px;
+    /* Adiciona um pouco de espaço abaixo do texto "PARCEIRO" quando empilhado */
+    margin-right: 0;
+    /* Remove a margem direita quando o texto está em uma nova linha */
+  }
+}
+
+/* Para telas muito pequenas (ex: celulares antigos) */
+@media (max-width: 480px) {
+  footer {
+    padding: 15px 5px;
+    gap: 15px;
+  }
+
+  .footer-left img,
+  .footer-right img {
+    max-width: 75px;
+    /* Reduz o tamanho das imagens para telas muito pequenas */
+  }
+
+  .partner-text {
+    font-size: 0.9em;
+  }
+}
+
+
+@media (max-width: 620px) {
+  .container_res {
+    flex-wrap: wrap;
+  }
+
+  .container_for {
+    width: 100%;
+  }
+
+  .event-cart {
+    height: 360px;
+    padding-bottom: 20px;
+  }
+
+  .divflexCart {
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  #input {
+    margin-bottom: 0px;
+  }
+
+  .contorno {
+    width: 100%;
+    max-width: 32rem;
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 25px;
+    margin: 5px;
+    box-shadow: 5px 10px 20px 2px black;
+    -webkit-box-shadow: 5px 10px 20px 2px black;
+  }
+
+  #teleft {
+    width: 80px;
+    height: 80x;
+    left: 5px;
+    top: 5px;
+  }
+
+  #teright {
+    width: 100px;
+    height: 100px;
+    right: 5px;
+    top: 5px;
+  }
+}

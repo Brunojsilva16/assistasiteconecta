@@ -1,0 +1,280 @@
+#entrada-one {
+    /* background: url("../assets/img/palestrante.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 640px;
+    height: 100vh;
+    bottom: 0;
+    top: 0; */
+    /* right: 0; */
+    /* left: 6px; */
+    /* transform: scaleX(1); */
+    /* order: 2; */
+
+    text-align: center;
+    /* Alinha o texto dentro do header ao centro */
+    background-image: url("../assets/img/palestrante.png");
+    background-size: contain;
+    /* Ajusta a imagem para cobrir toda a tela */
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    display: flex;
+    /* Utiliza flexbox para facilitar o alinhamento */
+    justify-content: center;
+    /* Alinha horizontalmente ao centro */
+    align-items: center;
+    /* Alinha verticalmente ao centro */
+    min-width: 100vw;
+    min-height: 100vh;
+    /* Define a altura mínima do corpo como a altura da viewport */
+}
+
+
+#entrada {
+    background: url("../assets/img/logo01.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 25px;
+    top: 25px;
+}
+
+#entrada-conecta {
+    background: url("../assets/img/conecta2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    right: 280px;
+    top: 0;
+}
+
+header.event-subscription {
+
+    /* #event-subscription { */
+    background: linear-gradient(rgb(199 130 65 / 50%), #040404), url(../assets/img/0010.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: end; */
+    height: 100vh;
+    color: var(--text-color);
+}
+
+.divflexHeader {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: end;
+    height: 100vh;
+}
+
+/* #entrada-one {
+    background: url("../assets/event/bruno02n.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 380px;
+    height: 490px;
+    right: 0;
+    left: 6px;
+    bottom: 0;
+    /* transform: scaleX(1); */
+    /* order: 1; 
+} */
+
+#principal {
+    order: 1;
+    align-self: center;
+    justify-self: center;
+    /* width: 31%; */
+}
+
+#facilite01 {
+    order: 0;
+}
+
+#facilite02 {
+    order: 3;
+}
+
+#entrada-two {
+    background: url(../assets/event/paulo_rfb5.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 380px;
+    height: 490px;
+    right: 6;
+    bottom: 0;
+    /* order: 3; */
+}
+
+#facilite01 p.title01,
+#facilite02 p.title02 {
+    background: linear-gradient(182deg, #ff98265e, #00000000);
+    font-family: Autography;
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+    border-radius: 50px;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+#principal .about-event {
+    font-family: Poppins;
+    font-size: 36px;
+    max-width: 520px;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-top: 20px;
+    left: 720px;
+    text-shadow: 3px 3px #000;
+    text-align: center;
+    line-height: 1.4;
+}
+
+#principal .about-event-two {
+    height: auto;
+    font-family: Poppins;
+    font-size: 40px;
+    margin-bottom: 0px;
+    color: var(--text-color);
+    margin-top: auto;
+    left: 720px;
+    text-shadow: 3px 3px #000;
+    letter-spacing: 12px;
+    font-weight: 700;
+    border-radius: 25px;
+    background-color: #af2846c2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#principal p.about-event-three {
+    background-color: #ff98262e;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 50px;
+    padding: 8px;
+}
+
+#subscription-form {
+    background-color: #5d5d5d87;
+    padding: 20px;
+    max-width: 620px;
+    border-radius: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    /* left: 720px;
+    bottom: 0px; */
+}
+
+#subscription-form p {
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.8em;
+}
+
+.form-group label {
+    color: var(--text-color);
+    /* margin-bottom: 0.3em; */
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.form-group input,
+.form-group select {
+    padding: 6px 10px;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    margin: 5px 0;
+}
+
+input#btn-inscr.btn {
+    background-color: #198754de;
+    color: var(--text-color);
+    text-transform: uppercase;
+    /* width: 50%; */
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+input#btn-inscr.btn:hover {
+    opacity: 1;
+}
+
+div.ctb {
+    width: auto;
+    margin: 0px;
+    font-weight: 600;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+div.ctb button {
+    text-transform: uppercase;
+    font-family: Poppins;
+    border-radius: 50px;
+}
+
+#entrada-zero {
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    right: 0;
+    left: 0px;
+    bottom: 0;
+}
+
+#section-one {
+    background-color: var(--p-primary);
+    height: 8vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+}
+
+#reta01 p {
+    font-family: Poppins;
+    text-align: end;
+    height: 60px;
+    background: linear-gradient(272deg, #fd5a1385, #af2846ab, #0000003b);
+    width: 230px;
+    color: #fff;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 0px 0px 0px 83px;
+}

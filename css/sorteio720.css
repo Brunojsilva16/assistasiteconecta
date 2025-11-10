@@ -1,0 +1,426 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    /* Ocupa 100% da altura da viewport (tela cheia) */
+    display: flex;
+    flex-direction: column;
+    /* Organiza os itens em coluna */
+    justify-content: center;
+    /* AGORA CENTRALIZA o conteúdo principal verticalmente */
+    align-items: center;
+    /* Centraliza horizontalmente */
+    /* background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); */
+    /* Gradiente de fundo vibrante */
+    background-image: url(../assets/img/fundo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+    /* Aplica a fonte importada */
+    overflow: hidden;
+    /* Evita barras de rolagem no body */
+    color: #fff;
+    /* Cor do texto padrão */
+    box-sizing: border-box;
+    /* Inclui padding e border na altura/largura */
+}
+
+/* Contêiner principal que divide a tela em duas colunas */
+#main-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Duas colunas de tamanhos iguais */
+    grid-template-columns: 70% 30%; /* Largura da sorteio-area (70%) e lista-participantes-area (30%) */
+    width: 100vw;
+    /* Largura total do wrapper */
+    /* Altura ajustada para caber entre o topo e o botão fixo */
+    height: calc(100vh - 150px);
+    /* 100vh - (altura do botão + margem) */
+    max-width: 1440px;
+    /* Limita a largura máxima */
+    margin-bottom: 100px;
+    /* background-color: rgba(0, 0, 0, 0.2); */
+    /* Fundo semi-transparente */
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    /* Garante que o conteúdo não vaze */
+    /* Removido margin-top e margin-bottom, pois o body.justify-content: center agora lida com isso */
+}
+
+/* Contêiner da área de sorteio (coluna esquerda) */
+#sorteio-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centraliza o conteúdo horizontalmente */
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    /* Essencial para o posicionamento absoluto do #sorteio-content */
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.1);
+    /* Um pouco mais escuro para diferenciar */
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    /* Linha divisória */
+}
+
+/* Novo contêiner para o resultado do sorteio e texto do prêmio */
+#sorteio-content {
+    position: absolute;
+    /* Posicionamento absoluto dentro de #sorteio-area */
+    top: 50%;
+    /* 50% do topo de #sorteio-area */
+    left: 50%;
+    /* 50% da esquerda de #sorteio-area */
+    transform: translate(-50%, -50%);
+    /* Centraliza o elemento com base no seu próprio tamanho */
+    width: 100%;
+    /* Ocupa a largura total para centralizar o texto */
+    padding: 0 10px;
+    /* Pequeno padding para não colar nas bordas */
+    box-sizing: border-box;
+    /* Inclui padding na largura */
+}
+
+/* Contêiner da lista de participantes (coluna direita) */
+#lista-participantes-area {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.1);
+    position: relative;
+    /* max-height: 100vh; */
+    height: calc(100vh - 190px);
+    z-index: 2;
+}
+
+#lista-participantes-area h2 {
+    font-size: 2.2em;
+    font-weight: 900;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    text-align: center;
+    /* Centraliza o título da lista */
+}
+
+#listaParticipantes {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    /* Adiciona scroll se a lista for muito longa */
+    flex-grow: 1;
+    /* Permite que a lista ocupe o espaço restante dentro da sua área */
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    scrollbar-width: thin;
+    /* Para navegadores baseados em Firefox */
+    scrollbar-color: #ff5e62 rgba(255, 255, 255, 0.5);
+    /* Cor do thumb e track */
+    min-height: 0;
+    /* ESSENCIAL: Permite que o flex item encolha corretamente e ative o scroll */
+}
+
+/* Estiliza a barra de rolagem para navegadores WebKit (Chrome, Safari) */
+#listaParticipantes::-webkit-scrollbar {
+    width: 8px;
+}
+
+#listaParticipantes::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+#listaParticipantes::-webkit-scrollbar-thumb {
+    background-color: #ff9966;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+
+.participante-item {
+    padding: 10px;
+    font-size: 1em;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: left;
+    /* Centraliza o texto de cada item da lista */
+}
+
+.participante-item:last-child {
+    border-bottom: none;
+}
+
+.participante-item.highlight {
+    background-color: #ff9966;
+    /* Cor de destaque para o sorteado */
+    color: #d14246;
+    /* Cor do texto no destaque */
+    font-size: 18px;
+    font-weight: 900;
+    box-shadow: 0 0 15px rgba(255, 255, 0, 0.7);
+    /* Brilho amarelo */
+    transform: scale(1.05);
+    transition: all 0.5s ease-in-out;
+}
+
+/* Estilo do botão de sorteio - AGORA FIXO */
+#sortearBtn {
+    position: fixed;
+    /* Fixo na viewport */
+    bottom: 30px;
+    /* 30px da parte inferior da tela */
+    left: 50%;
+    /* Começa no meio da tela */
+    transform: translateX(-50%);
+    /* Move 50% da sua própria largura para a esquerda para centralizar */
+    z-index: 100;
+    /* Garante que ele fique acima de todo o resto */
+
+    /* Estilos existentes do botão */
+    padding: 25px 50px;
+    font-size: 2.3em;
+    font-weight: 900;
+    color: #fff;
+    background: linear-gradient(45deg, #ff5e62, #ff9966);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    outline: none;
+}
+
+#sortearBtn:hover {
+    transform: translateX(-50%) translateY(-8px) scale(1.03);
+    /* Mantém o translateX */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), inset 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+#sortearBtn:active {
+    transform: translateX(-50%) translateY(-2px) scale(0.98);
+    /* Mantém o translateX */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para a área do resultado do sorteio */
+#resultadoSorteio {
+    margin-top: 30px;
+    padding: 0 14px;
+    font-size: 3.9em!important;
+    /* Tamanho grande para o nome */
+    color: #fff;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+    position: relative;
+    opacity: 0;
+    /* Começa invisível */
+    transform: scale(0.8);
+    /* Começa um pouco menor */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    /* Transição suave */
+    /* Efeitos de texto iniciais */
+    letter-spacing: -0.1em;
+    text-transform: uppercase;
+    filter: blur(10px);
+}
+
+/* Classe para exibir o resultado com a animação */
+#resultadoSorteio.show {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    letter-spacing: 0;
+    filter: blur(0);
+}
+
+/* Estilo para o texto "Você ganhou o prêmio" */
+#textoPremio {
+    font-size: 1.8em;
+    /* 50% do tamanho de 6em */
+    font-weight: 700;
+    /* Pode ser um pouco menos bold que o nome */
+    color: rgb(255 255 155 / 90%);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 0 0 15px rgba(0, 0, 0, 0.4);
+    margin-top: 30px;
+    /* Espaçamento entre o nome e este texto */
+    opacity: 0;
+    /* Começa invisível */
+    transform: translateY(20px);
+    /* Começa um pouco abaixo */
+    transition: opacity 0.8s ease-out 0.5s, transform 0.8s ease-out 0.5s;
+    /* Atraso para aparecer depois do nome */
+    will-change: opacity, transform;
+}
+
+#textoPremio.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estilo para os spans individuais de cada caractere (para o efeito letra a letra) */
+#resultadoSorteio span {
+    /* display: inline-block; */
+    /* Permite transformar cada letra individualmente */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+    /* Transição para cada letra */
+}
+
+/* Efeito de brilho/faísca */
+.sparkle-effect {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0;
+    animation: sparkle 1s forwards cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    /* Animação de brilho */
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff;
+    /* Efeito de brilho */
+    pointer-events: none;
+    /* Não interfere com cliques */
+}
+
+@keyframes sparkle {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+
+    30% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+}
+
+/* Efeito de confete */
+.confetti {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: var(--color);
+    /* Cor definida via JS */
+    border-radius: 50%;
+    opacity: 0;
+    animation: fall 3s forwards ease-out;
+    /* Animação de queda */
+    z-index: 1;
+    /* Abaixo do conteúdo principal */
+    pointer-events: none;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 724px) {
+    #main-wrapper {
+        grid-template-columns: 1fr;
+        /* Uma coluna em telas menores */
+        height: calc(95vh - 120px);
+        /* Ajusta altura para o botão fixo */
+        width: 95vw;
+    }
+
+    #sorteio-area {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        /* Linha divisória na parte inferior */
+    }
+
+    #lista-participantes-area {
+        max-height: 36vh;
+        /* Limita a altura da lista em telas menores */
+    }
+
+    #sortearBtn {
+        padding: 18px 35px;
+        font-size: 2.2em;
+    }
+
+    #resultadoSorteio {
+        font-size: 2.5em!important;
+    }
+
+    #textoPremio {
+        font-size: 2.25em;
+        /* 50% de 4.5em */
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    #sortearBtn {
+        padding: 15px 30px;
+        font-size: 2em;
+    }
+
+    #resultadoSorteio {
+        font-size: 2.5em!important;
+    }
+
+    #textoPremio {
+        font-size: 1.75em;
+        /* 50% de 3.5em */
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    #sortearBtn {
+        padding: 12px 25px;
+        font-size: 1.5em;
+        bottom: 20px;
+    }
+
+    #resultadoSorteio {
+        font-size: 2.2em!important;
+    }
+
+    #textoPremio {
+        font-size: 1.1em;
+        /* 50% de 2.5em */
+        margin-top: 10px;
+    }
+
+    #lista-participantes-area h2 {
+        font-size: 1.8em;
+    }
+
+    .participante-item {
+        font-size: 1em;
+        padding: 8px 10px;
+    }
+    .participante-item.highlight {
+        font-size: 16px;
+    }
+
+    #sorteio-area img {
+        width: 150px;
+        margin-bottom: 260px;
+    }
+}

@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "Lato", sans-serif;
+  line-height: 1;
+}
+
+body {
+  background-color: #f5f6f8;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.htexto {
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+}
+
+.htexto.wk {
+  margin-bottom: 3px;
+}
+
+.spantexto {
+  display: block;
+  font-size: 13px;
+  color: #dc3545;
+  text-align: center;
+}
+
+.hrbord {
+  border: 1px solid #fff !important;
+}
+
+.dropcircular {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.sidebar-navigation {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
+  /* min-height: 100vh; */
+  width: 125px;
+  background-color: #313443;
+  /* position: fixed; */
+  /* float: left; */
+}
+
+.sidebar-navigation ul a {
+  text-align: center;
+  color: white;
+}
+
+.sidebar-navigation ul li {
+  /* padding: 28px 0; */
+  cursor: pointer;
+  transition: all ease-out 120ms;
+}
+
+.sidebar-navigation ul li i {
+  display: block;
+  font-size: 24px;
+  transition: all ease 450ms;
+}
+
+.sidebar-navigation ul li .tooltip {
+  display: inline-block;
+  position: absolute;
+  background-color: #313443;
+  padding: 8px 15px;
+  border-radius: 3px;
+  margin-top: -8px;
+  left: 132px;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+.sidebar-navigation ul li .tooltip:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -4px;
+  top: 10px;
+  transform: rotate(45deg);
+  width: 10px;
+  height: 10px;
+  background-color: inherit;
+}
+
+.sidebar-navigation ul li:hover {
+  background-color: #fff;
+}
+
+.sidebar-navigation ul li:hover .tooltip {
+  visibility: visible;
+  background-color: #000;
+  color: #fff;
+  opacity: 1;
+}
+
+.sidebar-navigation ul li.active {
+  background-color: #fff;
+}
+
+.sidebar-navigation ul li.active i {
+  color: #1e90ff;
+}
+
+.profile p {
+  text-align: center;
+  color: rgb(206, 240, 253);
+  font-size: 14px;
+}
+
+.textopht {
+  padding: 10px;
+  font-family: Arial;
+  text-align: center;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.content {
+  margin-left: 220px;
+  padding: 20px;
+}
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+/* .imagem:hover .textopht {
+    opacity: 1;
+} */

@@ -1,0 +1,205 @@
+.wrapper {
+    display: flex;
+
+    .sidebar {
+        flex: 1 0 220px;
+
+        min-height: 100vh;
+        background-color: var(--p-primary);
+        transition: margin-left 0.3s;
+
+        h1 {
+            color: white;
+            padding: 30px;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        a {
+            display: flex;
+            padding: 15px 40px;
+            color: #fff;
+            text-decoration: none;
+
+            &:hover {
+                background-color: #fff;
+                color: var(--p-primary);
+            }
+
+            /* &.active,
+            &.active:hover {
+                background: #fff0df;
+                color: var(--p-primary);
+            } */
+
+            & i.fas {
+                margin-right: 15px;
+                font-size: 24px;
+            }
+        }
+
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        position: relative;
+        flex: 1 1 100%;
+        padding: 0px 40px;
+        /* // background-color: lightgray; */
+        background: #fff0df;
+        /* background: linear-gradient(to right, var(--p-secondary) 0%, var(--p-primary) 100%); */
+
+        h2 {
+            color: #000;
+        }
+
+        .toggle-sidebar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: white;
+            padding: .575rem .85rem;
+            background-color: var(--p-primary);
+            border: 0;
+            /* border-right: 2px solid darken($color-bg-sidebar, 10%);
+            border-bottom: 2px solid darken($color-bg-sidebar, 10%); */
+            border-bottom-right-radius: 18px;
+            outline: none;
+
+            &:hover {
+                /* // background-color: darken($color-bg-sidebar,10%); */
+                color: darken(#7386d5 10%);
+            }
+        }
+
+    }
+
+}
+
+.graf-container {
+    text-align: center;
+    width: 740px;
+    margin: 20 auto;
+    padding: 0px 20px 0px 20px;
+}
+
+@media all and (max-width: 780px) {
+    .graf-container {
+        width: auto;
+    }
+}
+
+@media all and (max-width: 400px) {
+    .graf-container {
+        padding: 0px 20px;
+    }
+}
+
+.sidebar-close {
+    margin-left: -220px;
+}
+
+.sidebar+.content .toggle-sidebar .fa-bars {
+    display: none;
+}
+
+.sidebar.sidebar-close+.content .toggle-sidebar .fa-bars {
+    display: block;
+}
+
+.sidebar.sidebar-close+.content .toggle-sidebar .fa-times {
+    display: none;
+}
+
+
+#flexCard {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+#flexCardtwo {
+    display: flex;
+    flex-direction: column;
+}
+
+.flexCard {
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-family: Poppins;
+    /* text-transform: uppercase; */
+    /* border: 1px solid #CAD0D2; */
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.card-fixedWidth {
+    width: 180px;
+    height: 180px;
+    margin: 25px;
+    border-radius: 22px;
+    border: 1px solid #CAD0D2;
+    color: #b44242;
+    cursor: point;
+    transition: 1s;
+    /* overflow: hidden; */
+
+    /* &:hover {
+        transform: scale(1.1);
+    } */
+}
+
+div.card__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+}
+
+div.card__descriptionText {
+    color: #57727C;
+    font-size: 12px;
+    text-align: center;
+    max-width: calc(100% - 30px);
+}
+
+div.card_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 135px;
+    width: 100%;
+}
+
+p.card_text {
+    text-align: center;
+    font-size: 50px;
+    color: var(--p-primary);
+    font-weight: 600;
+    width: 100%;
+}
+
+div.card_header {
+    text-align: center;
+    color: #57727C;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 22px 22px 0 0;
+    border-bottom: 1px solid #D7DBDD;
+    background-color: #d2e3ea;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

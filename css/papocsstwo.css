@@ -1,0 +1,437 @@
+div:where(.swal2-container) .swal2-input {
+    width: 90% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/*
+.FJA3UA {
+display: none !important;
+}
+
+.Ka9auQ {
+display: none !important;
+} */
+
+
+#section-1 {
+    background-image: url(../assets/papo/papo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    height: 460px;
+    width: 370px;
+}
+
+.section-1 {
+    background-image: url(../assets/papo/sect_one_center.png);
+    /* Substitua pelo caminho da imagem */
+}
+
+
+.section-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    text-align: justify;
+}
+
+div.section-1-content {
+    position: absolute;
+    top: 45%;
+    left: 21%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.6rem;
+    text-align: justify;
+    hyphens: auto;
+}
+
+/* div.section-2-content {
+position: absolute;
+top: 58%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: white;
+font-size: 1.6rem;
+text-align: justify;
+hyphens: auto;
+} */
+
+.section-1-content>h1,
+.section-1-content>p {
+    width: 365px;
+    padding-left: 20px;
+    font-size: 1em;
+    font-style: normal;
+    color: rgb(239, 99, 112);
+    text-decoration: none;
+    /* margin-left: 5rem; */
+}
+
+.botao-sombra {
+    display: inline-block;
+    /* Ou block, dependendo do layout */
+    padding: 18px 25px;
+    margin: 20px;
+    /* margin-left: 6rem; */
+    background-color: #5086c0;
+    /* Cor de fundo do botão */
+    color: white;
+    /* Cor do texto */
+    text-decoration: none;
+    /* Remove sublinhado padrão de links */
+    border: none;
+    /* Remove a borda padrão */
+    cursor: pointer;
+    /* Indica que é clicável */
+    font-size: 1.6rem;
+    border-radius: 60px;
+    box-shadow: 0px 10px 20px -8px black;
+    -webkit-box-shadow: 0px 10px 20px -8px black;
+    -moz-box-shadow: 0px 10px 20px -8px black;
+}
+
+.section-1-content>img {
+    margin-left: 1rem;
+    margin-bottom: 1.5rem;
+    width: 255px;
+    height: 85px;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+*/ .container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+    --bs-gutter-x: 0px !important;
+}
+
+div:where(.swal2-container) .swal2-radio label,
+div:where(.swal2-container) .swal2-checkbox label {
+    font-size: 1.35em !important;
+}
+
+div:where(.swal2-container) h2:where(.swal2-title) {
+    font-size: 1.6em !important;
+}
+
+button#btnCasal,
+button#btnIndividual {
+    background-color: #ef6370;
+    color: var(--text-color);
+    width: auto;
+    height: auto;
+    padding: 10px 30px;
+    border: none;
+    cursor: pointer;
+    opacity: 1;
+    border-radius: 50px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+/* #fc8c78 */
+
+#papo5 {
+
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 0) 30%),
+        linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 0) 30%),
+        url(../assets/img/papo5.png);
+
+    /* url(../assets/img/papo5.png); */
+    /* background-image: url(../assets/img/papo5.png); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    height: 110vh;
+}
+
+#individualPreco {
+    background-image: url(../assets/img/individual.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 460px;
+    width: 370px;
+}
+
+#individualPreco h1,
+#casalPreco h1 {
+    font-weight: 800;
+    font-family: PoppinsBold !important;
+}
+
+#individualPreco h2,
+#casalPreco h2 {
+    font-weight: 600;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+#individualPreco li,
+#casalPreco li {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+li::marker {
+    font-size: 1.3em;
+}
+
+/* ul{
+list-style-position: inside;
+} */
+
+#casalPreco {
+    background-image: url(../assets/img/casal.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 460px;
+    width: 370px;
+}
+
+#papo5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative
+}
+
+.papo5 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#individualPreco,
+#casalPreco {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 2.5rem;
+    color: #fff;
+}
+
+#papo5Title {
+    font-size: 2rem;
+    color: #fff;
+    font-family: PoppinsBold !important;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#papo5Title>p>span {
+    background-color: #ef6370;
+    padding: 6px 12px;
+}
+
+/* #papo5Title>p>span.01 {
+background-color: #ef6370;
+}
+#papo5Title>p>span.02 {
+background-color: #ef6370;
+} */
+
+#papo5Title {
+    background-image: url(../assets/img/papo-centro.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 6%;
+    height: 25%;
+    width: 50%;
+}
+
+#topleft {
+    background-image: url(../assets/img/banner-top.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50vh;
+    width: 100%;
+}
+
+
+#rodapePapo {
+    background-image: url(../assets/img/papo-rodape.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 10vh;
+    width: 25%;
+    margin-right: 0;
+    padding-right: 0;
+}
+
+#topright {
+    background-image: url(../assets/img/papo-right.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 12vh;
+    width: 25%;
+    margin-right: 0;
+    padding-right: 0;
+}
+
+#logo1 {
+    background-image: url(../assets/img/papo-logo01.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0px;
+    left: 5rem;
+    height: 16vh;
+    width: 9%;
+}
+
+#logo2 {
+    background-image: url(../assets/img/papo-logo02.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0px;
+    left: 25rem;
+    height: 15vh;
+    width: 10%;
+}
+
+/* 
+@media (max-width: 575.98px) {
+.papo5 {
+flex-direction: column;
+}
+
+#topleft {
+height: 17vh;
+}
+
+#papo5 {
+height: auto;
+}
+
+
+#papo5Title {
+width: 45%;
+margin-top: 36px;
+top: 0;
+}
+
+} */
+
+
+@media (max-width: 767.98px) {
+
+    .papo5 {
+        flex-direction: column;
+    }
+
+    #topleft {
+        height: 17vh;
+    }
+
+    #papo5 {
+        height: auto;
+    }
+
+
+    #papo5Title {
+        width: 50%;
+        margin-top: 36px;
+        top: 0;
+    }
+
+    #individualPreco {
+        margin-top: 100px;
+    }
+
+    #casalPreco {
+        margin-bottom: 20px;
+    }
+
+    #topright,
+    #rodapePapo,
+    #logo1,
+    #logo2 {
+        background-image: none;
+    }
+
+    .container,
+    .container-fluid,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        --bs-gutter-x: 0px !important;
+    }
+
+
+    ol,
+    ul {
+        padding-left: 1.2rem;
+    }
+
+    div.section-1-content {
+        top: 50%;
+        left: 25%;
+    }
+
+    .section-1-content>h1,
+    .section-1-content>p {
+        padding-left: 20;
+        margin-left: 0rem;
+        font-size: 0.7rem;
+        width: 160px;
+    }
+
+    .botao-sombra {
+        margin: 0rem 0rem 1rem 1rem;
+        /* font-size: 0.8rem; */
+        padding: 12px;
+        font-size: 0.8rem;
+    }
+
+    .section-1-content>img {
+        margin-left: 1rem;
+        margin-bottom: 0.5rem;
+        width: 124px;
+        height: 50px;
+    }
+
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    #topleft {
+        height: 30vh;
+    }
+
+}

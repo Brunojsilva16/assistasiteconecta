@@ -1,0 +1,321 @@
+.divflexCart {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: auto;
+    padding-top: 15px;
+}
+
+.divflexTop {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: auto;
+}
+
+#inputzero, #inputone, #inputtow {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* min-height: 100vh; */
+    margin-bottom: 16px;
+}
+
+
+
+
+.event-cart {
+    background: url(../assets/img/fundo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* height: 100vh; */
+    color: var(--text-color);
+    padding-bottom: 20px;
+}
+
+
+input.inscreva-form.btn:hover {
+    opacity: 0.7;
+}
+
+#botCupom:hover {
+    border-color: #666;
+    background-color: #198754;
+}
+
+span.resumoSpan {
+    font-weight: 400;
+}
+
+#cupomParc {
+    width: auto !important;
+}
+
+input.mod_one,
+input.mod_two,
+input.mod_three,
+input.mod_four {
+    visibility: hidden;
+    display: block;
+    border: 4px solid #666;
+}
+
+input[type="radio"]:checked+label {
+    border-color: #ccf;
+    background-color: green;
+    opacity: 0.6;
+}
+
+input[type="radio"]+label {
+    color: #fff;
+    background-color: var(--p-primary);
+    padding: 4px 8px;
+    border-radius: 12px;
+    border: solid 2px transparent;
+    font-family: Poppins;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input.btn-modalidade.btn {
+    background-color: #198754de;
+    color: var(--text-color);
+    text-transform: uppercase;
+    width: 50%;
+    padding: 6px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+input.btn-modalidade.btn:hover {
+    opacity: 1;
+}
+
+.contorno {
+    background-color: #5d5d5dd9;
+    padding: 15px 15px 5px 15px;
+    min-width: 365px;
+    border-radius: 30px;
+    margin: 5px;
+}
+
+#pagamento {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 40px;
+    height: auto !important;
+}
+
+.modvalue {
+    text-align: right;
+    font-size: 20px;
+}
+
+
+.container_for {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    align-content: center;
+    /* border: solid 3px red; */
+    height: auto;
+    width: 50%;
+    /* flex-grow: 1; */
+}
+
+.container_res {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: space-around;
+    /* border: solid 3px red; */
+    height: auto;
+    width: 100%;
+}
+
+#resumo_compra {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    /* border: solid 3px rgb(36, 56, 167); */
+    height: auto;
+    width: 100%;
+    margin: 15px 5px;
+    padding: 25px;
+}
+
+#resumo_pagamento {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    align-items: start;
+    /* border: solid 3px rgb(36, 56, 167); */
+    height: auto;
+    width: 100%;
+    margin: 15px 5px;
+    padding: 25px;
+}
+
+#frmcad {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#formCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+#frmInsc_lote,
+#formGrupo {
+    padding: 0 20px;
+}
+
+
+#frmInsc_lote .row {
+    padding-top: 6px;
+}
+
+#docUpload {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 8px 0;
+}
+
+.selecao {
+
+    background-color: #f1ebeb;
+    padding: 20px
+}
+
+.txbotaopagamento {
+    font-size: 19px;
+    color: var(--p-primary);
+    font-weight: 700;
+}
+/* 
+div.radioone.contorno,
+div.radiotwo.contorno {
+    opacity: 0.5;
+} */
+
+#zerocontorno.contorno, #twocontorno.contorno {
+    background-color: #5d5d5d99;
+    opacity: 0.6;
+    order: 1;
+}
+
+
+.xdez {
+    font-size: 22px; 
+    color: #FFC300; 
+    font-weight: 600;
+}
+
+.loteper {
+    font-size: 14px; 
+    letter-spacing: 6px; 
+    text-transform:  lowercase; 
+    margin-bottom: 12px;
+}
+
+.loteou {
+    font-size: 14px; 
+    display: flex; 
+    justify-content: flex-end; 
+    letter-spacing: 1px; 
+}
+
+/* #inputzero, #inputtow {
+    opacity: 0.4;
+} */
+
+
+
+.prevent-select {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+div.vendah {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Poppins;
+    text-transform: uppercase;
+}
+
+div.vendah h2 {
+    font-size: 24px;
+}
+
+div.vendah span {
+    font-size: 14px;
+}
+
+.btn-success {
+    text-transform: uppercase!important;
+    font-weight: 600!important;
+    border-radius: 25px!important;
+
+}
+
+#dadoslote_one, #dadoslote_grupo {
+    width: 180px!important;
+}
+
+@media (max-width: 620px) {
+
+    .container_res {
+        flex-wrap: wrap;
+    }
+
+    .container_for {
+        width: 100%;
+    }
+
+
+    .event-cart {
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    .divflexCart {
+        flex-wrap: wrap;
+        padding-top: 10px;
+        height: auto;
+    }
+
+    #input {
+        margin-bottom: 0px;
+    }
+
+    .contorno {
+        background-color: #5d5d5dd9;
+        padding: 14px;
+        border-radius: 25px;
+        margin: 5px;
+    }
+
+}

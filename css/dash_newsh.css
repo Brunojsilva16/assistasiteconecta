@@ -1,0 +1,368 @@
+/*  import google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+
+  --p-primary: #af2846;
+  --p-secondary: #ff9826;
+  --p-tertiary: #a3a4a6;
+  --secondary: #95989a;
+  --text-color: #fff;
+  --text-secondary: #000;
+  --text-tertiary: #5d5d5d;
+  --text-photo: #c9cca4;
+  --future: #ff6762;
+
+  --espaco-one: &nbsp;
+  --espaco-two: &ensp;
+  --espaco-three: &emsp;
+  /* --espaco-recuo: &nbsp;&nbsp;&nbsp;&nbsp; */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.5px;
+}
+
+body {
+  background: rgb(226, 226, 226);
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  left: 0;
+  width: 3.2rem;
+  background: #fff;
+  overflow: hidden;
+  /* Mantém para esconder o texto quando recolhido */
+  /* A transição é aplicada à propriedade 'width'.
+         A duração de 1s é mantida conforme o seu código original. */
+  transition: width 1s ease-in-out;
+  /* Impede que a nav encolha quando não houver espaço suficiente no container flex. */
+  flex-shrink: 0;
+  /* Garante que a nav fique sobre outros elementos, se houver sobreposição. */
+  z-index: 100;
+}
+
+nav:hover {
+  width: 260px;
+  /* A transição já está definida na 'nav', não precisa repetir aqui,
+         mas se repetir, certifique-se que é a mesma para evitar comportamentos inesperados. */
+}
+
+/* span.titleNav {
+  color: #4ad489;
+} */
+
+/* li.active-li {
+  background-color: #313443;
+  border-left: solid 5px #af2846;
+  color: #ddd !important;
+  width: 100%;
+} */
+
+li.active a {
+  color: #ddd;
+  transition: 0.5s;
+  /* padding-left: 21px; */
+}
+
+li.active i {
+  padding-left: 21px;
+}
+
+
+hr {
+  border-top: 2px solid #bbb;
+}
+
+/* .sidebar-navigation ul li.active {
+  background-color: #fff;
+}
+
+.sidebar-navigation ul li.active i {
+  color: #1e90ff;
+} */
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  background-color: #313443;
+  text-align: center;
+  color: #ddd;
+  width: 100%;
+  padding-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+
+.logo img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-top: 1rem;
+}
+
+.logo span {
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 6px 0 0 0;
+}
+
+a {
+  display: flex;
+  position: relative;
+  /* width: 200px; */
+  font-size: 14px;
+  color: #555353;
+  padding: 0;
+  text-decoration: none;
+  align-items: center;
+}
+
+nav .fas,
+nav .fa {
+  font-weight: 900;
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+.nav-item {
+  position: relative;
+  /* top: 12px;
+  margin-left: 10px; */
+}
+
+a:hover {
+  border-left: solid 5px #af2846;
+  background-color: #313443;
+  color: #ddd;
+  width: 100%;
+}
+
+a:hover i {
+  color: #ddd;
+  transition: 0.5s;
+}
+
+a:hover {
+  color: #ddd;
+  transition: 0.5s;
+}
+
+.gradient-link::before {
+  content: '';
+  /* Necessário para pseudo-elementos */
+  position: absolute;
+  /* Posiciona em relação ao link */
+  left: 0;
+  bottom: 0;
+  /* Posiciona na parte inferior */
+  width: 0;
+  /* Largura inicial zero (invisível) */
+  height: 3px;
+  /* Altura da borda gradiente */
+  background-image: linear-gradient(to right, red, orange);
+  /* Gradiente */
+  transition: width 0.3s ease-in-out;
+  /* Adiciona uma transição suave para a largura */
+}
+
+/* Estado hover: expande a largura do pseudo-elemento */
+.gradient-link:hover::before {
+  width: 100%;
+  /* Expande a largura para 100% no hover */
+}
+
+.logout {
+  position: absolute;
+  bottom: 30px;
+}
+
+.container {
+  display: flex;
+}
+
+/* MAin Section */
+.main {
+  position: relative;
+  /* padding: 20px; */
+  width: 100%;
+}
+
+.main-top {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  position: fixed;
+  /* padding: 20px; */
+  padding: 10px 30px;
+  background-color: #313443;
+  color: #ddd;
+  z-index: 9999;
+  /* border-left: solid 5px #af2846; */
+}
+
+.main-top::before {
+  content: '';
+  /* Required for pseudo-elements */
+  position: absolute;
+  /* Position relative to the container */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 5px;
+  /* Set the width of the gradient border */
+  /* Apply the linear gradient as the background */
+  background-image: linear-gradient(to bottom, red, orange);
+  z-index: 1;
+  /* Ensure it's above the container's background */
+}
+
+.main-top .fa,
+.main-top .fas {
+  font-size: 2.2rem;
+}
+
+.main-top i {
+  position: fixed;
+  right: 0;
+  margin: 10px 30px;
+  /* color: rgb(110, 109, 109); */
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  /* Inicialmente oculto */
+  position: absolute;
+  top: 100%;
+  /* Posição abaixo do ícone */
+  right: 0;
+  /* Alinha à direita do ícone */
+  background-color: #fff;
+  z-index: 1;
+  min-width: 150px;
+  margin-top: 8px;
+  border-radius: 0.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  /* Largura mínima do menu */
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu li {
+  border-bottom: 1px solid #ddd;
+}
+
+.dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f1f1f1;
+  border-radius: 0.5rem;
+}
+
+/*Attendance List serction  */
+.attendance {
+  padding: 0 20px;
+  /* text-transform: capitalize; */
+}
+
+.attendance-list {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 15px;
+  min-width: 100%;
+  overflow: hidden;
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+    /* border-left: solid 6px #af2846; */
+}
+
+.th-acao {
+  text-align: center;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+/* table thead tr {
+  color: #2c160b;
+  background: linear-gradient(180deg, #ff8a32 0%, #ffb4b4 100%);
+  text-align: left;
+  font-weight: bold;
+} */
+
+table thead tr {
+  color: #fff;
+  /* background: linear-gradient(180deg, #ff8a32 0%, #ffb4b4 100%); */
+  background-color: #313443;
+  /* border-left: solid 6px #af2846; */
+  text-align: left;
+  font-weight: bold;
+}
+
+
+.table th,
+.table td {
+  padding: 8px 12px;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.table tbody tr:nth-of-type(odd) {
+  background: #f3f3f3;
+}
+
+/* .table tbody tr.active {
+  font-weight: bold;
+  color: #4ad489;
+} */
+
+.table tbody tr:last-of-type {
+  border-bottom: 2px solid #4ad489;
+}
+
+@media (max-width: 480px) {
+
+  nav .fas,
+  nav .fa {
+    font-weight: 900;
+    font-size: 20px;
+    padding: 12px 12px 12px 30px;
+  }
+}

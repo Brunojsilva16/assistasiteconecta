@@ -1,0 +1,82 @@
+@font-face {
+  font-family: BrunoAceSC;
+  src: url('../fonts/BrunoAceSC-Regular.ttf');
+}
+
+@font-face {
+  font-family: AllertaStencil;
+  src: url('../fonts/AllertaStencil-Regular.ttf');
+}
+
+@font-face {
+  font-family: Monoton;
+  src: url('../fonts/Monoton-Regular.ttf');
+}
+
+@font-face {
+  font-family: Orbitron;
+  src: url('../fonts/Orbitron-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: Orbitron-static;
+  src: url('../fonts/Orbitron-static/Orbitron-Bold.ttf');
+}
+
+@font-face {
+  font-family: RubikDirt;
+  src: url('../fonts/RubikDirt-Regular.ttf');
+}
+
+@font-face {
+  font-family: RubikDistressed;
+  src: url('../fonts/RubikDistressed-Regular.ttf');
+}
+
+@font-face {
+  font-family: SecularOne;
+  src: url('../fonts/SecularOne-Regular.ttf');
+}
+
+@font-face {
+  font-family: SixtyfourConvergence;
+  src: url('../fonts/SixtyfourConvergence-Regular.ttf');
+}
+
+@font-face {
+  font-family: MetalMania;
+  src: url('../fonts/MetalMania-Regular.ttf');
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url('../fonts/Poppins-Regular.ttf');
+}
+
+@font-face {
+  font-family: PoppinsBold;
+  src: url('../fonts/Poppins-Bold.ttf');
+}
+
+@font-face {
+  font-family: Amsterdam;
+  src: url('../fonts/Amsterdam.ttf');
+}
+@font-face {
+  font-family: Autography;
+  src: url('../fonts/Autography-DOLnW.otf');
+}
+@font-face {
+  font-family: NotoSerifTodhri;
+  src: url('../fonts/NotoSerifTodhri-Regular');
+}
+
+@font-face {
+  font-family: LibreBaskerville;
+  src: url('../fonts/LibreBaskerville-Bold');
+}
+
+@font-face {
+  font-family: RyeRegular;
+  src: url('../fonts/Rye-Regular.ttf');
+}

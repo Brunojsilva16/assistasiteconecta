@@ -1,0 +1,156 @@
+.button {
+  padding: 6px 16px;
+  margin: 4px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: transparent;
+}
+
+.button1 {
+  color: black;
+  border: 2px solid #04AA6D;
+}
+
+.button1:hover {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.button2 {
+  color: black;
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+.button3 {
+  color: black;
+  border: 2px solid #a48b18;
+}
+
+.button3:hover {
+  background-color: #a48b18;
+  color: white;
+}
+
+.button4 {
+  color: black;
+  border: 2px solid #8b0303;
+}
+
+.button4:hover {
+  background-color: #8b0303;
+  color: white;
+}
+
+
+.anexo {
+  display: flex;
+  position: relative;
+  font-size: 14px;
+  color: green;
+  padding: 6px 0;
+  text-decoration: none;
+  align-items: center;
+  padding: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid green;
+  justify-content: center;
+}
+
+.sem-anexo {
+  display: flex;
+  position: relative;
+  /* width: 200px; */
+  font-size: 14px;
+  color: #b42121;
+  padding: 6px 0;
+  text-decoration: none;
+  align-items: center;
+  padding: 6px 20px;
+  /* margin: 0 4px; */
+  border-radius: 10px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid red;
+}
+
+.status {
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  line-height: 1;
+}
+
+.status i {
+  margin-right: 6px;
+  font-size: 14px;
+}
+
+.status.active {
+  background-color: rgba(76, 240, 131, 0.15);
+  color: green;
+  border: 1px solid rgba(76, 240, 112, 0.3);
+}
+
+.status.isento {
+  background-color: rgba(76, 201, 240, 0.15);
+  color: #0891b2;
+  border: 1px solid rgba(76, 201, 240, 0.3);
+}
+
+.status.pending {
+  background-color: rgba(248, 150, 30, 0.15);
+  color: #d97706;
+  border: 1px solid rgba(248, 150, 30, 0.3);
+}
+
+.status.cancelled {
+  background-color: rgba(247, 37, 37, 0.15);
+  color: #8b0303;
+  border: 1px solid rgba(247, 37, 133, 0.3);
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.btn.copiar {
+  background-color: #ccc;
+  border-radius: 30px;
+  padding: 4px 10px;
+}
+
+/* Estilo para o botão depois que o conteúdo foi copiado com sucesso */
+.btn.copiado {
+  background-color: #28a745;
+  /* Um tom de verde para indicar sucesso */
+  border-color: #28a745;
+  color: #fff;
+  /* Texto branco para melhor contraste */
+}
+
+/* Opcional: Estilo para quando passar o mouse sobre o botão já copiado */
+.btn.copiado:hover {
+  background-color: #218838;
+  /* Um verde um pouco mais escuro */
+  border-color: #1e7e34;
+}

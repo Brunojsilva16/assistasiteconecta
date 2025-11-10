@@ -1,0 +1,68 @@
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative; /* Para posicionar os botões */
+  }
+
+  .carousel {
+    display: flex;
+    width: 500%; /* 5 imagens * 100% */
+    transition: transform 0.5s ease-in-out; /* Adiciona transição suave */
+    transform: translateX(0);
+  }
+  .carousel img {
+    width: 20%; /* 100% / 5 imagens */
+    height: auto;
+  }
+
+  .carouselpage {
+    display: flex;
+    width: 500%; /* 5 imagens * 100% */
+    transition: transform 0.5s ease-in-out; /* Adiciona transição suave */
+    transform: translateX(0);
+  }
+
+  .carouselpage img {
+    width: 20%; /* 100% / 5 imagens */
+    height: auto;
+  }
+
+  .carousel-nav {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+  }
+
+  .carousel-nav button {
+    margin: 0 5px;
+    padding: 10px;
+    border: none;
+    background-color: #ccc;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .carousel-nav button:hover{
+    background-color: #aaa;
+  }
+  .carousel-nav button.active {
+    background-color: #007bff;
+    color: white;
+  }
+  .carousel-controlpapo{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 5px;
+  }
+  .carousel-controlpapo-prev{
+    left: 10px;
+  }
+  .carousel-controlpapo-next{
+    right: 10px;
+  }

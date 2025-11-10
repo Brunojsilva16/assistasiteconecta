@@ -1,0 +1,152 @@
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+    --bs-gutter-x: 0px !important;
+    --bs-gutter-y: 0px !important;
+}
+
+
+.section-content-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    /* Para posicionar os botões */
+}
+
+.section-content {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0);
+}
+
+.section-content img {
+    width: 100%;
+    height: auto;
+}
+
+div#pagament1 {
+    position: absolute;
+    top: 80%;
+    left: 26%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.6rem;
+    text-align: justify;
+    hyphens: auto;
+}
+
+div#pagament2 {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.6rem;
+    text-align: justify;
+    hyphens: auto;
+}
+
+div#pagament3 {
+    position: absolute;
+    top: 86%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.6rem;
+    text-align: justify;
+    hyphens: auto;
+}
+
+div#pagament4 {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.6rem;
+    text-align: justify;
+    hyphens: auto;
+}
+
+div#pagament5 {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.6rem;
+    text-align: justify;
+    hyphens: auto;
+}
+
+.botao-sombra1 {
+    display: inline-block;
+    /* Ou block, dependendo do layout */
+    padding: 10px 20px;
+    /* margin: 0px; */
+    background-color: #fc502a;
+    /* Cor de fundo do botão */
+    color: rgb(255, 255, 255);
+    /* Cor do texto */
+    text-decoration: none;
+    /* Remove sublinhado padrão de links */
+    border: none;
+    /* Remove a borda padrão */
+    cursor: pointer;
+    /* Indica que é clicável */
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: 50px;
+    box-shadow: 0px 10px 20px -8px black;
+    -webkit-box-shadow: 0px 10px 20px -8px black;
+    -moz-box-shadow: 0px 10px 20px -8px black;
+
+    &:hover {
+        background-color: #e786708c;
+        box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.4);
+    }
+}
+
+
+@media (max-width: 430.98px) {
+
+    .botao-sombra1 {
+        padding: 5px 15px;
+        font-size: 0.8rem;
+    }
+
+    footer .logo-foot-img {
+        height: 72px;
+    }
+
+    footer p {
+        margin-bottom: 0;
+    }
+
+
+}
+
+@media (min-width: 430px) and (max-width: 575.98px) {
+    .botao-sombra1 {
+        padding: 5px 15px;
+        font-size: 0.8rem;
+    }
+
+    footer .logo-foot-img {
+        height: 72px;
+    }
+
+    footer p {
+        margin-bottom: 0;
+    }
+
+
+
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {}
